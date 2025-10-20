@@ -8,3 +8,6 @@ async function getUsers(){
     const users = await response.json()
 
 }
+function Home(){
+    window.location.href = "./home/index.html"
+}
