@@ -1,10 +1,10 @@
 function Mesa() {
-    window.location.href = "./mesa/index.html";
+    window.location.href = "../mesa/index.html";
 }
 function Pedido() {
-    window.location.href = "./pedido/index.html";
+    window.location.href = "../pedido/index.html";
 
 }
 function Cardapio() {
-    window.location.href = "./cardapio/index.html";
+    window.location.href = "../cardapio/index.html";
 }
