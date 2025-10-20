@@ -1,0 +1,29 @@
+li {
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    gap: 12px;
+}
+li button {
+    height: 80px;
+    width: 120px;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    background-color: teal;
+    color: white;
+    font-weight: bold;
+}
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    background-color: rgb(0, 13, 47);
+    padding: 12px;
+}

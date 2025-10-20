@@ -96,3 +96,6 @@ async function removeUser(){
     })
     console.log(response,"response delete")
 }
+function Home(){
+    window.location.href = "./home/index.html"
+}
