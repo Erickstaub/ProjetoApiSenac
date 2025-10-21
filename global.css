@@ -1,0 +1,12 @@
+:root{
+    --cor-secundaria: #DA627D;
+    --cor-base: #FFB627;
+    --cor-preto: #000000;
+    --cor-input: #F0EFF4;
+    --cor-terciaria: #F71735;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
