@@ -4,21 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="global.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../login/style.css">
+    <link rel="stylesheet" href="../global.css">
 </head>
 <body>
     <div class="wrapper">
-        <h1>Login</h1>
+        <div class="logo">
+        <img src="../img/logo.jpg" alt="logo">
+        </div>
+        <h1>Bem-Vindo</h1>
+        <p>por favor, bote seus detalhes</p>
         <form>
             <div>
-                <input type="text" id="nome" placeholder="nome">
+                <label for="firstname-input"></label>
+                <p>Nome Completo</p>
+                <input type="text" id="nome">
             </div>
             <div>
-                <input type="email" id="email" placeholder="senha">
+                <label for="email-input"></label>
+                <p>Email</p>
+                <input type="email" id="email">
             </div>
             <div>
-                <input type="password" id="senha" placeholder="senha">
+                <label for="password-input"></label>
+                <p>Senha</p>
+                <input type="password" id="senha">
             </div>
             <button type="submit">Login</button>
         </form>
