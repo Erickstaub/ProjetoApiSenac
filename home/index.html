@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <ul>
+    <video autoplay muted loop id="myVideo">
+        <source src="/img/fundo.mp4" type="video/mp4">
+    </video>
     <nav>
         <a href="/">Login</a>
-            <a href="../usuario/index.html">User</a>
+        <a href="../usuario/index.html">User</a>
 
     </nav>
-    <li>
-    <button onclick="Mesa()">MESA</button>
-    <button onclick="Pedido()">PEDIDO</button>
-    <button onclick="Cardapio()">CARDAPIO</button></li>
-</ul>
+    <ul>
+        <li>
+            <button onclick="Mesa()">
+                <img src="/img\3293741.png">
+                <span>MESA</span>
+            </button>
+            <button onclick="Pedido()">
+                <img src="/img\7952901.png">
+                <span>PEDIDO</span>
+            </button>
+            <button onclick="Cardapio()">
+                <img src="/img\9704074.png">
+                <span>CARDÁPIO</span>
+            </button>
+        </li>
+    </ul>
     <script src="./script.js"></script>
 </body>
+
 </html>
