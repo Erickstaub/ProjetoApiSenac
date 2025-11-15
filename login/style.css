@@ -3,34 +3,40 @@ html {
     color: var(--cor-text);
     text-align: center;
 }
+
 body {
     min-height: 100vh;
     background-color: red;
     background-size: cover;
     background-position: right;
     overflow: hidden;
+    background-image: url('../img/fundo1.gif');
 }
+
 .logo img {
     display: block;
-    width: 180px;
+    width: 300px;
     height: auto;
     margin-bottom: 24px;
 }
+
 .wrapper {
     box-sizing: border-box;
     background-color: var(--cor-base);
     height: 100vh;
-    width: max(40%, 600px);
+    width: max(450px);
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
 h1 {
     font-size: 28px;
     text-transform: uppercase;
 }
+
 form {
     width: min(400px, 100%);
     margin-top: 20px;
@@ -40,16 +46,19 @@ form {
     align-items: center;
     gap: 10px;
 }
-form > div {
+
+form>div {
     width: 100%;
     display: flex;
     justify-content: center;
 }
+
 form label {
     flex-shrink: 0;
     height: 30px;
     width: 30px;
 }
+
 form input {
     box-sizing: border-box;
     flex-grow: 1;
@@ -62,17 +71,21 @@ form input {
     background-color: var(--cor-secundaria);
     transition: 150ms ease;
 }
+
 form input:hover {
     border-color: var(--cor-base);
 }
+
 form input:focus {
     outline: none;
     border-color: var(--cor-text);
 }
+
 form input::placeholder {
     color: var(--cor-text);
     opacity: 1;
 }
+
 form button {
     margin-top: 10px;
     border: none;
@@ -83,9 +96,11 @@ form button {
     cursor: pointer;
     transition: 150ms ease;
 }
+
 form button:hover {
     background-color: var(--cor-text);
 }
+
 form button:focus {
     outline: none;
     background-color: var(--cor-text);
