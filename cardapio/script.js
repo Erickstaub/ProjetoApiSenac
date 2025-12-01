@@ -22,22 +22,29 @@ async function Carrega() {
         } else if (cardapios[i].titulo.toLowerCase().includes("merda")) {
             img.src = "../img/merda.jpg"
         }
-        li.addEventListener('click', () => {
-            if (p == 0) {
-                const detalhe = document.createElement('h2');
-                detalhe.innerText = cardapios[i].descricao;
-                li.appendChild(detalhe);
-                li.style.height = "450px"
-                p = 1;
-            }
-            else if (p == 1) {
-                li.removeChild(li.lastChild);
-                p = 0;
-                li.style.height = "400px"
-            }
+        li.addEventListener('mouseenter', (e) => {
+            console.log("aaaaaa")
+            document.body.insertAdjacentHTML('beforeend', `
+        <div class="deswrapper">
+        <div class="desmodal">
+      
+                <h1 id="produto"></h1>
+                <h2 id="descr"></h2>
+        </div>
+    </div>
+    `);
+            const prod = document.getElementById('produto')
+            const desc = document.getElementById('descr')
 
+
+            prod.innerText = cardapios[i].titulo
+            desc.innerText = cardapios[i].descricao
 
         });
+        li.addEventListener('mouseleave', () => {
+            const wrapper = document.querySelector('.deswrapper');
+            wrapper.remove()
+        })
         li.append(img, h1, h2);
         ul.appendChild(li);
     }

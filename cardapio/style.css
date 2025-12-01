@@ -164,3 +164,21 @@ li h2 {
 
 
 }
+
+.deswrapper {
+    border-radius: 12px;
+    border: 2px solid black;
+    position: fixed;
+    bottom: 10%;
+    left: 40%;
+    max-width: 250px;
+    word-wrap: break-word;
+    background-color: #ffffff;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.deswrapper .desmodal {
+    padding: 8px;
+}

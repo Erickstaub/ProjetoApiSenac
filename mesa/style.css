@@ -57,6 +57,7 @@ ul {
 }
 
 li {
+    position: relative;
     list-style: none;
     display: block;
     margin: 24px;
@@ -103,8 +104,9 @@ nav button {
     border: none;
 }
 
-li button {
+/* li button {
     position: relative;
+    z-index: 10;
     display: flex;
     flex-direction: column;
     padding-left: 12px;
@@ -118,4 +120,135 @@ li button {
 
 
     cursor: pointer;
+} */
+
+.wrapper {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.modal {
+    background-color: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.modal .close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal .close-button:hover {
+    color: rgb(45, 4, 4);
+}
+
+.modal h1 {
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.modal #sim {
+    background-color: green;
+    color: #fff;
+    width: 48px;
+    height: 24px;
+}
+
+.modal #nao {
+    background-color: red;
+    color: #fff;
+    width: 48px;
+    height: 24px;
+}
+
+li .li2 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 8px;
+    width: 250px;
+    height: 75px;
+    gap: 4px;
+
+}
+
+li .li2 button {
+
+    color: #fff;
+    gap: 8px;
+    width: 75px;
+    height: 35px;
+    border-radius: 8px;
+
+}
+
+li .li2 .dis {
+    background-color: green;
+}
+
+li .li2 .ocu {
+    background-color: red;
+}
+
+li .li2 .res {
+    background-color: rgb(169, 141, 2);
+}
+
+.reswrapper {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.resmodal {
+    background-color: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.resmodal .close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.resmodal .close-button:hover {
+    color: rgb(45, 4, 4);
+}
+
+.resmodal h1 {
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
 }
