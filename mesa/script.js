@@ -2,7 +2,6 @@ import { baseUrl } from "../baseUrl.js";
 
 var num = 1;
 async function Carega() {
-    //const baseUrl = "http://localhost:7022";
     const response = await fetch(`${baseUrl}/api/Mesa`);
     const mesas = await response.json();
     console.log(mesas);
