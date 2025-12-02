@@ -14,29 +14,24 @@
         <div class="logo">
             <img src="../img/logo1.png" alt="logo">
         </div>
-        <h1>Bem-Vindo</h1>
+       <div class="form">
+         <h1>Bem-Vindo</h1>
         <p>por favor, bote seus detalhes</p>
         <form>
             <div>
-                <label for="firstname-input"></label>
-                <p>Nome Completo</p>
-                <input type="text" id="nome">
+                <input type="text" id="nome" placeholder="Nome Completo">
             </div>
             <div>
-                <label for="email-input"></label>
-                <p>Email</p>
-                <input type="email" id="email">
+                <input type="email" id="email" placeholder="Email">
             </div>
             <div>
-                <label for="password-input"></label>
-                <p>Senha</p>
-                <input type="password" id="senha">
+                <input type="password" id="senha" placeholder="Senha">
             </div>
-            <button type="submit">Login</button>
+            <button onclick="Home()" type="submit">Login</button>
         </form>
+       </div>
         <p>Não tem uma conta? <a href="/mesa/index.html">Criar conta</a></p>
     </div>
-    <button onclick="Home()">IR PRA HOME</button>
     <script src="./script.js"></script>
 </body>
 

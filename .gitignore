@@ -10,7 +10,7 @@
 *.userosscache
 *.sln.docstates
 *.env
-
+baseUrl.js
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
