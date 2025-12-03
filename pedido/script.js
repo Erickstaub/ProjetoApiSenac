@@ -1,5 +1,7 @@
+import { baseUrl } from "../baseUrl.js";
+
 async function CarregaPedido() {
-    const response = await fetch('https://localhost:7022/api/Comanda');
+    const response = await fetch(`${baseUrl}/api/Comanda`);
     const data = await response.json();
     console.log(data);
     for (let i = 0; i < data.length; i++) {

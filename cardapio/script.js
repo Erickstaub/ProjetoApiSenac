@@ -1,5 +1,7 @@
+import { baseUrl } from "../baseUrl.js";
+
 async function Carrega() {
-    const resposta = await fetch("https://localhost:7022/api/CardapioItem");
+    const response = await fetch(`${baseUrl}/api/CardapioItem`);
     const cardapios = await resposta.json();
     console.log(cardapios);
     for (let i = 0; i < cardapios.length; i++) {
