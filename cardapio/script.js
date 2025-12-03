@@ -1,4 +1,4 @@
-import { baseUrl } from "../baseUrl";
+import { baseUrl } from "../baseUrl.js";
 
 async function Carrega() {
     const response = await fetch(`${baseUrl}/api/CardapioItem`);
