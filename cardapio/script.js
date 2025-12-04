@@ -2,7 +2,7 @@ import { baseUrl } from "../baseUrl.js";
 
 async function Carrega() {
     const response = await fetch(`${baseUrl}/api/CardapioItem`);
-    const cardapios = await resposta.json();
+    const cardapios = await response.json();
     console.log(cardapios);
     for (let i = 0; i < cardapios.length; i++) {
         let p = 0

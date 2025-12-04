@@ -1,4 +1,4 @@
-import { baseUrl } from "../baseUrl.js";
+import { baseUrl } from "../baseUrl";
 
 async function CarregaPedido() {
     const response = await fetch(`${baseUrl}/api/Comanda`);
