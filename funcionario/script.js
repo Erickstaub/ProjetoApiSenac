@@ -1,16 +1,16 @@
 async function Carrega() {
-    const response = await fetch(`https://localhost:7022/api/Usuario`);
-    const usuario = await response.json();
-    for (let i = 0; i < usuario.length; i++) {
+    const response = await fetch(`https://localhost:7022/api/Funcionario`);
+    const funci = await response.json();
+    for (let i = 0; i < funci.length; i++) {
         const ul = document.querySelector('ul');
         const img = document.createElement("img")
         const li = document.createElement("li")
         const nome = document.createElement("h2")
         const funcao = document.createElement("h1")
         const salario = document.createElement("h3")
-        nome.innerText = usuario[i].nome
-        funcao.innerText = usuario[i].email
-        salario.innerText = "R$" + usuario[i].senha
+        nome.innerText = funci[i].nome
+        funcao.innerText = funci[i].cargo
+        salario.innerText = "R$" + funci[i].salario
         if (funcao.textContent == "cozinheiro") {
             img.src = "/img/cozinheiro.png"
         } else if (funcao.textContent == "atendente") {
@@ -68,7 +68,7 @@ async function Carrega() {
             `)
             const h1 = document.getElementById("h1")
             const salario = document.getElementById("salario")
-            h1.innerText = usuario[i].nome + "\n" + usuario[i].email
+            h1.innerText = funci[i].nome + "\n" + funci[i].cargo
 
 
         })
