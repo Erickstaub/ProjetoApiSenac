@@ -1,38 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Painel do Restaurante</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../global.css">
 </head>
 
 <body>
-    <video autoplay muted loop id="myVideo">
-        <source src="/img/fundo.mp4" type="video/mp4">
-    </video>
-    <nav>
-        <a href="/">Login</a>
-        <a href="../usuario/index.html">User</a>
-
+    <nav class="top-nav">
+        <div class="nav-left">
+            <span class="nav-logo">SenacFoods</span>
+        </div>
+        <div class="nav-links">
+            <a href="/">Login</a>
+            <a href="../usuario/index.html">Usuário</a>
+        </div>
     </nav>
-    <ul>
-        <li>
-            <button onclick="Mesa()">
-                <img src="/img\mesas.png">
-                <span>MESA</span>
-            </button>
-            <button onclick="Pedido()">
-                <img src="/img\pedido.png">
-                <span>PEDIDO</span>
-            </button>
-            <button onclick="Cardapio()">
-                <img src="/img\cardapio.png">
-                <span>CARDÁPIO</span>
-            </button>
-        </li>
-    </ul>
+
+    <main class="home-wrapper">
+        <header class="home-header">
+            <h1>Painel Principal</h1>
+            <p>Escolha o que deseja gerenciar</p>
+        </header>
+
+        <ul class="menu-grid">
+            <li>
+                <button class="menu-card" onclick="Mesa()">
+                    <div class="menu-icon">
+                        <img src="/img/mesas.png" alt="Mesas">
+                    </div>
+                    <span class="menu-title">Mesa</span>
+                    <span class="menu-desc">Controle de mesas e ocupação</span>
+                </button>
+            </li>
+
+            <li>
+                <button class="menu-card" onclick="Pedido()">
+                    <div class="menu-icon">
+                        <img src="/img/pedido.png" alt="Pedido">
+                    </div>
+                    <span class="menu-title">Pedido</span>
+                    <span class="menu-desc">Abrir, editar e finalizar pedidos</span>
+                </button>
+            </li>
+
+            <li>
+                <button class="menu-card" onclick="Cardapio()">
+                    <div class="menu-icon">
+                        <img src="/img/cardapio.png" alt="Cardápio">
+                    </div>
+                    <span class="menu-title">Cardápio</span>
+                    <span class="menu-desc">Gerenciar itens e categorias</span>
+                </button>
+            </li>
+        </ul>
+    </main>
+
     <script src="./script.js"></script>
 </body>
 
