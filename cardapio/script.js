@@ -47,11 +47,80 @@ async function Carrega() {
             const wrapper = document.querySelector('.deswrapper');
             wrapper.remove()
         })
+        //feito por erick na baia dele
+        li.addEventListener('mousedown', () => {
+
+            timer = setTimeout(() => {
+                li.style.border = "1px solid red"
+                li.style.boxShadow = "0px 0px 0px 1px red"
+                document.body.insertAdjacentHTML('beforeend', `
+    <div class="wrapper">
+    <div class="modal">
+    <button class="close-button" id="close">X</button>
+            <h1>Deseja Deletar?</h1>
+            <form>
+                <button type="submit" id="sim">SIM</button>
+                <button type="submit" id="nao">NÂO</button>
+            </form>
+    </div>
+</div>
+`)
+                const nao = document.getElementById("nao")
+                nao.addEventListener("click", () => {
+                    const wrapper = document.querySelector('.wrapper');
+                    wrapper.remove()
+                    li.style.border = "1px solid black"
+                    li.style.boxShadow = "0px 0px 0px 1px #2c2c2c"
+                })
+                const sair = document.getElementById("close")
+                sair.addEventListener("click", () => {
+                    const wrapper = document.querySelector('.wrapper');
+                    wrapper.remove()
+                    li.style.border = "1px solid black"
+                    li.style.boxShadow = "0px 0px 0px 1px #2c2c2c"
+                })
+                const sim = document.getElementById("sim")
+                sim.addEventListener("click", async () => {
+                    const putBody = {
+                        id: cardapios[i].id
+                    };
+                    const putResponse = await fetch(`https://localhost:7022/api/CardapioItem/${cardapios[i].id}`, {
+                        method: 'DELETE',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(putBody)
+                    })
+                    li.style.border = "1px solid black"
+                    li.style.boxShadow = "0px 0px 0px 1px #2c2c2c"
+                })
+            }, 600)
+        })
+        li.addEventListener("mouseup", () => {
+            clearTimeout(timer);
+        })
+
+
+
+
+
+
+
+
+        //
+
+
+
+
         li.append(img, h1, h2);
         ul.appendChild(li);
     }
 }
 Carrega();
+
+
+
+
 async function CardapioPost() {
     document.body.insertAdjacentHTML('beforeend', `
         <div class="wrapper">
