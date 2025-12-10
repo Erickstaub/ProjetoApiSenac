@@ -119,7 +119,10 @@ async function Carrega() {
 Carrega();
 
 
-
+const button = document.getElementById('+');
+button.addEventListener('click', () => {
+    CardapioPost();
+});
 
 async function CardapioPost() {
     document.body.insertAdjacentHTML('beforeend', `
