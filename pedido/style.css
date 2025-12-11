@@ -69,8 +69,10 @@ ul {
 }
 
 li {
+
     list-style: none;
-    display: block;
+    display: flex;
+    flex-direction: column;
     margin: 24px;
     background-color: #fff;
     align-items: column;
@@ -81,6 +83,7 @@ li {
     width: 250px;
     height: 400px;
     border-radius: 20px;
+    gap: 16px;
 }
 
 li:hover {
@@ -96,8 +99,92 @@ li img {
 }
 
 li h1 {
+    gap: 16px;
     font-size: 24px;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
 
+}
+
+.wrapper {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.modal {
+    background-color: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.modal .close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal .close-button:hover {
+    color: rgb(45, 4, 4);
+}
+
+.modal h1 {
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.modal #aberta {
+    background-color: green;
+    color: #fff;
+    width: 80px;
+
+    height: 24px;
+}
+
+.modal #cancelada {
+    background-color: red;
+    color: #fff;
+    width: 80px;
+
+    height: 24px;
+}
+
+.modal #fechada {
+    background-color: rgb(255, 166, 0);
+    color: #fff;
+    width: 80px;
+    height: 24px;
+}
+
+li h2 {
+    font-size: 40px;
+    text-align: center;
+    position: relative;
+    bottom: -180px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 8px;
+}
+
+li img {
+    border-radius: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+    height: 200px;
+    position: relative;
+    top: -70px
 }
