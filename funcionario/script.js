@@ -58,6 +58,11 @@ async function Carrega() {
                 </div>
                 </div>
             `)
+            const sair = document.getElementById("close")
+            sair.addEventListener("click", () => {
+                const wrapper = document.querySelector('.wrapper');
+                wrapper.remove()
+            })
             const h1 = document.getElementById("h1")
             const salario = document.getElementById("number")
             h1.innerText = funci[i].nome + "\n" + funci[i].cargo
@@ -120,6 +125,13 @@ async function Carrega() {
     </div>
 </div>
 `)
+                const air = document.getElementById("close")
+                air.addEventListener("click", () => {
+                    const wrapper = document.querySelector('.wrapper');
+                    wrapper.remove()
+                    li.style.border = "1px solid black"
+                    li.style.boxShadow = "0px 0px 0px 1px #2c2c2c"
+                })
                 const nao = document.getElementById("nao")
                 nao.addEventListener("click", () => {
                     const wrapper = document.querySelector('.wrapper');
