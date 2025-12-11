@@ -12,6 +12,10 @@ body {
     background-position: right;
     background-image: url('../img/fundo1.gif');
     overflow: hidden;
+
+   
+    display: flex;
+    flex-direction: column;
 }
 
 .logo img {
@@ -19,19 +23,18 @@ body {
     width: 100px;
     height: auto;
 }
-
-/* TOPO – mais parecido com o login (sem transparência) */
 .top-nav {
     box-sizing: border-box;
     width: 100%;
     padding: 12px 24px;
-    background-color: var(--cor-input); /* fundo sólido */
+    background-color: var(--cor-input); 
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: sticky;
     top: 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    flex-shrink: 0;
 }
 
 .nav-left {
@@ -70,23 +73,24 @@ body {
     color: var(--cor-input);
 }
 
-/* PAINEL PRINCIPAL – parecido com o .wrapper do login */
 .home-wrapper {
     box-sizing: border-box;
-    background-color: var(--cor-input);  /* painel sólido, sem blur */
-    height: calc(100vh - 56px);          /* altura total menos o topo */
-    width: max(450px, 50%);              /* semelhante ao login */
+    background-color: var(--cor-input);  
+    width: max(450px, 50%);           
     padding: 24px;
+    
+    flex: 1;
+    margin: 0 auto;                
     display: flex;
     flex-direction: column;
+    justify-content: center;    
     align-items: flex-start;
-    justify-content: space-between;
+
     position: relative;
     border-radius: 0 0 20px;
     box-shadow: rgba(0, 0, 0, 0.10) 0px 4px 12px;
 }
 
-/* Cabeçalho interno da home */
 .home-header {
     width: 100%;
     text-align: left;
@@ -99,7 +103,6 @@ body {
     text-transform: uppercase;
 }
 
-/* GRID DE BOTÕES/MENU */
 .menu-grid {
     list-style: none;
     padding: 0;
@@ -110,13 +113,12 @@ body {
     gap: 18px;
 }
 
-/* Card de cada item – sem fundo transparente/blur */
 .menu-card {
     width: 100%;
     min-height: 150px;
     border-radius: 12px;
     border: 1px solid var(--cor-secundaria);
-    background-color: transparent; /* usa o fundo branco do painel */
+    background-color: transparent;
     color: var(--cor-text);
     padding: 16px 12px;
     cursor: pointer;
@@ -128,7 +130,7 @@ body {
     font: inherit;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    box-shadow: none; /* remove sombra pesada tipo “blur” */
+    box-shadow: none;
     transition: transform 160ms ease, background-color 160ms ease, color 160ms ease, box-shadow 160ms ease;
 }
 
@@ -144,7 +146,6 @@ body {
     transform: translateY(-1px) scale(0.99);
 }
 
-/* Ícone circular dentro do card */
 .menu-icon {
     width: 60px;
     height: 60px;
@@ -173,7 +174,6 @@ body {
     opacity: 0.9;
 }
 
-/* RESPONSIVO */
 @media (max-width: 600px) {
     .top-nav {
         padding-inline: 12px;
@@ -181,9 +181,9 @@ body {
 
     .home-wrapper {
         width: 100%;
-        height: calc(100vh - 56px);
         padding-inline: 12px;
         border-radius: 0 0 16px;
+        justify-content: flex-start;
     }
 
     .home-header h1 {
