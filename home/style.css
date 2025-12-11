@@ -6,12 +6,12 @@ html {
 
 body {
     min-height: 100vh;
-    background-size: cover;
-    background-position: right;
-    overflow: hidden;
-    background-image: url('../img/fundo1.gif');
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-size: cover;
+    background-position: right;
+    background-image: url('../img/fundo1.gif');
+    overflow: hidden;
 }
 
 .logo img {
@@ -19,17 +19,19 @@ body {
     width: 100px;
     height: auto;
 }
+
+/* TOPO – mais parecido com o login (sem transparência) */
 .top-nav {
     box-sizing: border-box;
     width: 100%;
     padding: 12px 24px;
-    background-color: rgba(0, 0, 0, 0.35);
-    backdrop-filter: blur(6px);
+    background-color: var(--cor-input); /* fundo sólido */
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: sticky;
     top: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .nav-left {
@@ -43,7 +45,7 @@ body {
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--cor-input);
+    color: var(--cor-secundaria);
 }
 
 .nav-links {
@@ -52,44 +54,70 @@ body {
     gap: 12px;
 }
 
+.nav-links a {
+    text-decoration: none;
+    font-size: 12px;
+    color: var(--cor-text);
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: 150ms ease;
+}
+
 .nav-links a:hover {
     border-color: var(--cor-secundaria);
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-.home-wrapper {
-    box-sizing: border-box;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 24px 16px 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-}
-
-.home-header {
-    text-align: left;
-    margin-bottom: 24px;
+    background-color: var(--cor-secundaria);
     color: var(--cor-input);
 }
 
+/* PAINEL PRINCIPAL – parecido com o .wrapper do login */
+.home-wrapper {
+    box-sizing: border-box;
+    background-color: var(--cor-input);  /* painel sólido, sem blur */
+    height: calc(100vh - 56px);          /* altura total menos o topo */
+    width: max(450px, 50%);              /* semelhante ao login */
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 0 0 20px;
+    box-shadow: rgba(0, 0, 0, 0.10) 0px 4px 12px;
+}
+
+/* Cabeçalho interno da home */
+.home-header {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 24px;
+    color: var(--cor-text);
+}
+
+.home-header h1 {
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+/* GRID DE BOTÕES/MENU */
 .menu-grid {
     list-style: none;
     padding: 0;
     margin: 0;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 18px;
 }
 
-/* Card de cada item */
+/* Card de cada item – sem fundo transparente/blur */
 .menu-card {
     width: 100%;
-    height: 170px;
+    min-height: 150px;
     border-radius: 12px;
     border: 1px solid var(--cor-secundaria);
-    background-color: rgba(0, 0, 0, 0.35);
-    color: var(--cor-input);
+    background-color: transparent; /* usa o fundo branco do painel */
+    color: var(--cor-text);
     padding: 16px 12px;
     cursor: pointer;
     display: flex;
@@ -100,20 +128,23 @@ body {
     font: inherit;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
-    transition: transform 160ms ease;
+    box-shadow: none; /* remove sombra pesada tipo “blur” */
+    transition: transform 160ms ease, background-color 160ms ease, color 160ms ease, box-shadow 160ms ease;
 }
 
 .menu-card:hover {
     transform: translateY(-4px);
     background-color: var(--cor-secundaria);
     border-color: var(--cor-base);
+    color: var(--cor-input);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.20);
 }
 
 .menu-card:active {
     transform: translateY(-1px) scale(0.99);
 }
 
+/* Ícone circular dentro do card */
 .menu-icon {
     width: 60px;
     height: 60px;
@@ -142,13 +173,17 @@ body {
     opacity: 0.9;
 }
 
+/* RESPONSIVO */
 @media (max-width: 600px) {
     .top-nav {
         padding-inline: 12px;
     }
 
     .home-wrapper {
+        width: 100%;
+        height: calc(100vh - 56px);
         padding-inline: 12px;
+        border-radius: 0 0 16px;
     }
 
     .home-header h1 {
@@ -156,7 +191,7 @@ body {
     }
 
     .menu-card {
-        height: auto;
+        min-height: auto;
         padding-block: 14px;
     }
 }
