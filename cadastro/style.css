@@ -1,0 +1,44 @@
+   form {
+       display: flex;
+       flex-direction: column;
+       gap: 16px;
+       align-items: center;
+       margin-bottom: 80px;
+
+   }
+
+   form input {
+       border-radius: 6px;
+       outline: none;
+       border: 1px solid;
+       width: 200px;
+       display: inline-block;
+   }
+
+   body {
+       min-height: 100vh;
+       background-size: cover;
+       background-position: right;
+       overflow: hidden;
+       background-image: url('../img/fundo1.gif');
+       display: flex;
+       align-items: center;
+       justify-content: center;
+   }
+
+   button:active {
+       background: #ffb700;
+       color: white;
+       padding: 10px 20px;
+       border: none;
+       box-shadow: 3px 3px 0px #000000;
+       transition: 0.4ms;
+   }
+
+   button {
+       display: flex;
+       flex-direction: column;
+       gap: 16px;
+       align-items: center;
+       margin-bottom: -180px;
+   }
