@@ -28,6 +28,8 @@ body {
     justify-content: space-between;
     position: relative;
     padding-left: 24px;
+    border-radius: 0 0 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .form {
     width: 90%;
