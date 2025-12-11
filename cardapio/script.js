@@ -15,14 +15,26 @@ async function Carrega() {
         h2.innerText = "R$ " + cardapios[i].preco.toFixed(2);
         if (cardapios[i].titulo.toLowerCase().includes("x")) {
             img.src = "../img/ham.png"
-        } else if (cardapios[i].titulo.toLowerCase().includes("coca")) {
+        } else if (cardapios[i].titulo.toLowerCase().includes("coca") || cardapios[i].titulo.toLowerCase().includes("pepsi") || cardapios[i].titulo.toLowerCase().includes("refri") || cardapios[i].titulo.toLowerCase().includes("guarana")) {
             img.src = "../img/refri.png"
         } else if (cardapios[i].titulo.toLowerCase().includes("batata")) {
             img.src = "../img/batata.png"
-        } else if (cardapios[i].titulo.toLowerCase().includes("hot")) {
+        } else if (cardapios[i].titulo.toLowerCase().includes("hot") || cardapios[i].titulo.toLowerCase().includes("dog")) {
             img.src = "../img/hot.png"
         } else if (cardapios[i].titulo.toLowerCase().includes("merda")) {
             img.src = "../img/merda.jpg"
+        } else if (cardapios[i].titulo.toLowerCase().includes("pizza")) {
+            img.src = "../img/pizza.png"
+        } else if (cardapios[i].titulo.toLowerCase().includes("marmita") || cardapios[i].titulo.toLowerCase().includes("prato feito")) {
+            img.src = "../img/marmita.png"
+        } else if (cardapios[i].titulo.toLowerCase().includes("sushi") || cardapios[i].titulo.toLowerCase().includes("japones")) {
+            img.src = "../img/sushi.png"
+
+
+        } else if (cardapios[i].titulo.toLowerCase().includes("churrasco")) {
+            img.src = "../img/churrasco.png"
+        } else if (cardapios[i].titulo.toLowerCase().includes("67")) {
+            img.src = "../img/67.png"
         }
         li.addEventListener('mouseenter', (e) => {
             console.log("aaaaaa")

@@ -34,7 +34,7 @@ async function CarregaPedido() {
                 img.src = "../img/ham.png"
                 return;
             }
-            if (pri.titulo.toLowerCase().includes("coca")) {
+            if (pri.titulo.toLowerCase().includes("coca") || pri.titulo.toLowerCase().includes("pepsi") || pri.titulo.toLowerCase().includes("refri") || pri.titulo.toLowerCase().includes("guarana")) {
                 img.src = "../img/refri.png"
                 return;
             }
@@ -42,8 +42,28 @@ async function CarregaPedido() {
                 img.src = "../img/batata.png"
                 return;
             }
-            if (pri.titulo.toLowerCase().includes("hot")) {
+            if (pri.titulo.toLowerCase().includes("hot") || pri.titulo.toLowerCase().includes("dog")) {
                 img.src = "../img/hot.png"
+                return;
+            }
+            if (pri.titulo.toLowerCase().includes("pizza")) {
+                img.src = "../img/pizza.png"
+                return;
+            }
+            if (pri.titulo.toLowerCase().includes("marmita")) {
+                img.src = "../img/marmita.png"
+                return;
+            }
+            if (pri.titulo.toLowerCase().includes("sushi")) {
+                img.src = "../img/sushi.png"
+                return;
+            }
+            if (pri.titulo.toLowerCase().includes("churrasco")) {
+                img.src = "../img/churrasco.png"
+                return;
+            }
+            if (pri.titulo.toLowerCase().includes("67")) {
+                img.src = "../img/67.png"
                 return;
             }
         });
