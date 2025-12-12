@@ -20,21 +20,19 @@ body {
 
 .logo img {
     display: block;
-    width: 100px;
+    width: 60px;
     height: auto;
 }
 .top-nav {
     box-sizing: border-box;
     width: 100%;
-    padding: 12px 24px;
+    padding: 0 24px;
     background-color: var(--cor-input); 
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: sticky;
-    top: 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    flex-shrink: 0;
 }
 
 .nav-left {
